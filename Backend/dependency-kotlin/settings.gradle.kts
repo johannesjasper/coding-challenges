@@ -20,6 +20,7 @@ pluginManagement {
 }
 
 include(
+    "infra",
     "inquiry",
     "notifications",
     "application"
