@@ -11,3 +11,22 @@ spring:
           starttls:
             enable: false
             required: false
+  rabbitmq:
+    listener:
+      simple:
+        defaultRequeueRejected: false  # do not requeue failed messages but send them to DLQ
+
+email:
+  retryBackoffMillis: 5000
+  maxRetries: 5
+
+
+logging:
+  level:
+    org:
+      springframework:
+        amqp:
+          rabbit:
+            listener:
+              ConditionalRejectingErrorHandler: ERROR
+
