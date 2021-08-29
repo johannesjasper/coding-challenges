@@ -7,5 +7,5 @@ data class ArticleDto(
     var title: String,
     var description: String,
     var author: String,
-    var blocks: Collection<ArticleBlockDto>
+    var blocks: List<ArticleBlockDto>
 )
