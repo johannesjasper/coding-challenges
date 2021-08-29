@@ -10,7 +10,8 @@ import java.util.*
 object ArticleRepository {
     fun all(): List<Article> = setOf(1001L, 2002L, 3003L, 4004L, 5005L).map { it.createDummyArticle }
 
-    fun findBy(id: Long): Article = id.createDummyArticle
+    // note: changed the return type to nullable in order to simulate non-existent articles
+    fun findBy(id: Long): Article? = id.createDummyArticle
 
     fun create(article: Article?) {
         //Ignore
